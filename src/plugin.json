@@ -1,0 +1,40 @@
+{
+  "type": "datasource",
+  "name": "plugin-grafana-swe-ts",
+  "id": "vram-sw-plugin-grafana-swe-ts",
+  "metrics": true,
+  "info": {
+    "description": "Plugin for SWE",
+    "author": {
+      "name": "mrampazz",
+      "url": "mramp.me"
+    },
+    "keywords": [
+      "SWE",
+      "plugin",
+      "grafana",
+      "app"
+    ],
+    "logos": {
+      "small": "img/logo.svg",
+      "large": "img/logo.svg"
+    },
+    "links": [
+      {
+        "name": "Website",
+        "url": "https://github.com/grafana/simple-datasource"
+      },
+      {
+        "name": "License",
+        "url": "https://github.com/grafana/simple-datasource/blob/master/LICENSE"
+      }
+    ],
+    "screenshots": [],
+    "version": "%VERSION%",
+    "updated": "%TODAY%"
+  },
+  "dependencies": {
+    "grafanaVersion": "6.5.x",
+    "plugins": []
+  }
+}

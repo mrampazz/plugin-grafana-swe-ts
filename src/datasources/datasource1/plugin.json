@@ -1,0 +1,7 @@
+{
+    "type": "datasource",
+    "name": "FirstDataSource",
+    "id": "aaaa-yikes-datasource",
+    "metrics": true,
+    "annotations": true
+}

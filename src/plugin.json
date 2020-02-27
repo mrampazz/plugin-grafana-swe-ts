@@ -1,5 +1,5 @@
 {
-  "type": "datasource",
+  "type": "app",
   "name": "plugin-grafana-swe-ts",
   "id": "vram-sw-plugin-grafana-swe-ts",
   "metrics": true,
@@ -33,6 +33,36 @@
     "version": "%VERSION%",
     "updated": "%TODAY%"
   },
+  "includes": [
+    {
+      "type": "page",
+      "name": "Page 1",
+      "component": "Page1",
+      "role": "Viewer",
+      "addToNav": true,
+      "defaultNav": true
+    },
+    {
+      "type": "page",
+      "name": "Page 2",
+      "component": "Page2",
+      "role": "Viewer",
+      "addToNav": true,
+      "defaultNav": true
+    },
+    {
+      "type": "page",
+      "name": "Page 3",
+      "component": "Page3",
+      "role": "Viewer",
+      "addToNav": true,
+      "defaultNav": true
+    },
+    {
+      "type": "panel",
+      "name": "First panel woooooooooh"
+    }
+  ],
   "dependencies": {
     "grafanaVersion": "6.5.x",
     "plugins": []

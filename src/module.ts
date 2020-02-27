@@ -2,9 +2,9 @@ import { AppPlugin } from '@grafana/data';
 import { AppSettings } from './types';
 import { ConfigCtrl } from './config/config';
 
-import { RootPage } from './config/react/RootPage';
-import { Page1 } from './config/react/Page1';
-import { Page2 } from './config/react/Page2';
+import { RootPage } from './pages/RootPage';
+import { Page1 } from './pages/Page1';
+import { Page2 } from './pages/Page2';
 
 export {
   ConfigCtrl

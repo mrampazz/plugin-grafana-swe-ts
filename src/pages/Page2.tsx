@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react';
 
 // Types
 import { PluginConfigPageProps, AppPluginMeta } from '@grafana/data';
-import { AppSettings } from '../../types';
+import { AppSettings } from '../types';
 
 interface Props extends PluginConfigPageProps<AppPluginMeta<AppSettings>> {}
 

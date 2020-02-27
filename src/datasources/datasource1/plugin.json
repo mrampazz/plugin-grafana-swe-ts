@@ -1,11 +1,13 @@
 {
-    "type": "panel",
-    "name": "First panel",
-    "id": "first-panel",
+    "type": "datasource",
+    "name": "First datasource",
+    "id": "first-ds",
     "version": "%VERSION%",
     "updated": "%TODAY%",
+    "metrics": true,
+    "annotations": false,
     "info": {
-        "description": "Panel plugin developed for Grafana",
+        "description": "Datasource plugin developed for Grafana",
         "author": {
             "name": "VRAM Software",
             "url": "https://github.com/VRAM-Software"
@@ -13,7 +15,7 @@
         "links": [
             {
                 "name": "GitHub",
-                "url": "https://github.com/VRAM-Software/grafana_prediction_plugin/src/panels/panel1"
+                "url": "https://github.com/VRAM-Software/grafana_prediction_plugin/src/datasources/datasource1"
             },
             {
                 "name": "License",

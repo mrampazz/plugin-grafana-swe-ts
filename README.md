@@ -15,22 +15,27 @@ I plugin che vogliamo inserire devono essere inseriti nella seguente struttura:
 ```
 src
     |- config
-        |- react           // files delle pagine in React
-            Page1.tsx
-            Page2.tsx
-            RootPage.tsx
         config.html        // template html per config.ts
         config.ts          // classe per gestire abilitazione plugin
+    |- pages
+        Page1.tsx
+        Page2.tsx
+        RootPage.tsx
     |- panels              // cartella che contiene i plugin di tipo panel
-        |- panel1          // cartella che contiene il plugin panel1
+        |- panel1          
             module.ts
             plugin.json
             |- react
                 Panel.tsx
-    |- datasources         // cartella che contiene i plugin di tipo dataS
+    |- datasources         // cartella che contiene i plugin di tipo datasource
         |- datasource1
-    plugin.json            // file .json che include gli altri plugin
+            |- config
+                config.html
+            datasource.ts
+            module.ts
+            plugin.json
     module.ts              // entry point del plugin di tipo app
+    plugin.json            // file .json che include gli altri plugin
 ```
 
 

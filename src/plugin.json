@@ -1,18 +1,20 @@
 {
   "type": "app",
-  "name": "plugin-grafana-swe-ts",
-  "id": "vram-sw-plugin-grafana-swe-ts",
+  "name": "Grafana prediction plugin",
+  "id": "grafana-prediction-plugin",
+  "screenshots": [],
+  "version": "%VERSION%",
+  "updated": "%TODAY%",
   "metrics": true,
   "info": {
-    "description": "Plugin for SWE",
+    "description": "App plugin developed for Grafana",
     "author": {
-      "name": "mrampazz",
-      "url": "mramp.me"
+      "name": "VRAM Software",
+      "url": "https://github.com/VRAM-Software"
     },
     "keywords": [
-      "SWE",
       "plugin",
-      "grafana",
+      "Grafana",
       "app"
     ],
     "logos": {
@@ -21,17 +23,14 @@
     },
     "links": [
       {
-        "name": "Website",
-        "url": "https://github.com/grafana/simple-datasource"
+        "name": "GitHub",
+        "url": "https://github.com/VRAM-Software/grafana_prediction_plugin/src"
       },
       {
         "name": "License",
-        "url": "https://github.com/grafana/simple-datasource/blob/master/LICENSE"
+        "url": "https://github.com/VRAM-Software/grafana_prediction_plugin/blob/master/LICENSE"
       }
-    ],
-    "screenshots": [],
-    "version": "%VERSION%",
-    "updated": "%TODAY%"
+    ]
   },
   "includes": [
     {
@@ -58,7 +57,11 @@
     },
     {
       "type": "panel",
-      "name": "First panel woooooooooh"
+      "name": "First panel"
+    },
+    {
+      "type": "datasource",
+      "name": "First datasource"
     }
   ],
   "dependencies": {

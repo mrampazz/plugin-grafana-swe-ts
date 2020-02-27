@@ -1,32 +1,23 @@
-// import { AppPlugin } from '@grafana/data';
-// import { AppSettings } from './utils/types';
-import { CtrlConfig } from './config/CtrlConfig';
+import { AppPlugin } from '@grafana/data';
+import { AppSettings } from './types';
+// import { ConfigCtrl } from './config/config';
+// legacy imports not needed for new stuff??????
 
-import { Page1 } from './pages/Page1';
-import { Page2 } from './pages/Page2';
-import { Page3 } from './pages/Page3';
-// import delle pagine da inserire nel plugin
+import { RootPage } from './config/RootPage';
+import { Page1 } from './config/Page1';
+import { Page2 } from './config/Page2';
 
-
-export {
-  Page1,
-  Page2,
-  Page3,
-  CtrlConfig
-}
-
-
-// ============================================
-// La documentazione sulle classi/tipi/funzioni
-// di Grafana sono praticamente inesistenti
-// ============================================
-// Gli app plugin sono dei plugin che permettono
-// di avere in un unico posto plugin per data 
-// source e plugin per pannelli. Permette di
-// creare pagine custom per la documentazione,
-// signup forms o controllo di servizi per http server
-// ============================================
-// I plugin dei pannelli e delle data source saranno 
-// visualizzabili come normali plugin mentre la pagina 
-// dell'app saranno disponibili nel menu principale
-// ============================================
+export const plugin = new AppPlugin<AppSettings>()
+  .setRootPage(RootPage)
+  .addConfigPage({
+    title: 'Page 1',
+    icon: 'fa fa-info',
+    body: Page1,
+    id: 'page1',
+  })
+  .addConfigPage({
+    title: 'Page 2',
+    icon: 'fa fa-user',
+    body: Page2,
+    id: 'page2',
+  });

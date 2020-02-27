@@ -39,21 +39,19 @@
       "name": "Page 1",
       "component": "Page1",
       "role": "Viewer",
-      "addToNav": true,
-      "defaultNav": true
+      "addToNav": true
     },
     {
       "type": "page",
       "name": "Page 2",
       "component": "Page2",
       "role": "Viewer",
-      "addToNav": true,
-      "defaultNav": true
+      "addToNav": true
     },
     {
       "type": "page",
-      "name": "Page 3",
-      "component": "Page3",
+      "name": "Root Page",
+      "component": "RootPage",
       "role": "Viewer",
       "addToNav": true,
       "defaultNav": true

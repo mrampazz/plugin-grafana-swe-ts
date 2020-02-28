@@ -4,6 +4,7 @@ export class ConfigCtrl {
   static templateUrl = 'config/config.html';
   appEditCtrl: any;
   appModel?: PluginMeta;
+  file: any;
 
   /** @ngInject */
   constructor($scope: any, $injector: any) {

@@ -38,7 +38,7 @@
       "name": "Page 1",
       "component": "Page1",
       "role": "Viewer",
-      "addToNav": true
+      "addToNav": false
     },
     {
       "type": "page",

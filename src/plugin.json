@@ -29,6 +29,12 @@
         {
             "type": "panel",
             "name": "VRAM Software"
+        },
+        {
+            "type": "dashboard",
+            "name": "Test Dashboard",
+            "path": "./dashboards/test_dashboard.json",
+            "addToNav": true
         }
     ],
     "dependencies": {

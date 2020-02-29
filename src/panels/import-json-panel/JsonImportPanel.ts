@@ -7,7 +7,13 @@ export class JsImportPanel extends PanelCtrl {
   static scrollable = true;
 
   panelDefaults = {
-
+    draw_area_id: "",
+    graph_connected_to_network: false,
+    jsonContent: "",
+    save_datasources: [],
+    secondToRefresh: 5,
+    write_datasource_id: "",
+    write_db_name: "test_DB"
   };
 
   constructor ($scope: any, $injector: any) {

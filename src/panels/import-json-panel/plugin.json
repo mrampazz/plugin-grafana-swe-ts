@@ -1,7 +1,7 @@
 {
     "type": "panel",
-    "name": "First panel",
-    "id": "first-panel",
+    "name": "VRAM panel",
+    "id": "vram-panel",
 
     "info": {
         "author": {

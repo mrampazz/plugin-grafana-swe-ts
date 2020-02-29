@@ -1,8 +1,11 @@
-import { PanelCtrl } from 'grafana/app/plugins/sdk';
+import {PanelCtrl} from "grafana/app/plugins/sdk";
 
 import _ from "lodash";
 
 export class JsImportPanel extends PanelCtrl {
+  static templateUrl = "panels/import-json-panel/partials/panelTemplate.html";
+  static scrollable = true;
+
   panelDefaults = {
 
   };
@@ -16,8 +19,8 @@ export class JsImportPanel extends PanelCtrl {
 
   onInitEditMode () {
     this.addEditorTab("Manage network",
-      "public/plugins/grafana-prediction-plugin/panels/import-json-panel/partials/optionTab_importEditJson.html",
-      1);
+        "public/plugins/grafana-prediction-plugin/panels/import-json-panel/partials/optionTab_importEditJson.html",
+        1);
 
     this.events.emit("data-received", null);
 
@@ -31,6 +34,11 @@ export class JsImportPanel extends PanelCtrl {
 
   // Called on import button click but also to re-load a saved network
   async onUpload (net: any) {
+
+  }
+
+  // Called from anularjs with ng-change
+  onTextBoxRefresh () {
 
   }
 }

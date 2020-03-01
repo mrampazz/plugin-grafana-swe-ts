@@ -3,8 +3,8 @@ import { PanelEvents } from '@grafana/data';
 import { MetricsPanelCtrl } from 'grafana/app/plugins/sdk';
 import appEvents from 'grafana/app/core/app_events';
 
-export class JsImportPanel extends MetricsPanelCtrl {
-  static templateUrl = 'panels/import-json-panel/partials/panelTemplate.html';
+export class StatusPluginCtrl extends MetricsPanelCtrl {
+  static templateUrl = 'panels/edit-panel/partials/panelTemplate.html';
   static scrollable = true;
 
   panelDefaults = {
@@ -20,7 +20,7 @@ export class JsImportPanel extends MetricsPanelCtrl {
   }
 
   onInitEditMode() {
-    this.addEditorTab('Import JSON', 'public/plugins/grafana-prediction-plugin/panels/import-json-panel/partials/optionTab_importEditJson.html', 2);
+    this.addEditorTab('Import JSON', 'public/plugins/grafana-prediction-plugin/panels/edit-panel/partials/importJson.html', 2);
   }
 
   // Called only on import button click, if the import doesn't throw errors, it reset the saved data
@@ -30,7 +30,7 @@ export class JsImportPanel extends MetricsPanelCtrl {
 
   // Called on import button click but also to re-load a saved network
   async onUpload(net: any) {
-    this.panel.jsonContent = JSON.stringify(net, null, "\t");
+    this.panel.jsonContent = JSON.stringify(net, null, '\t');
     appEvents.emit('alert-success', ['File Json Caricato']);
   }
 
@@ -41,5 +41,4 @@ export class JsImportPanel extends MetricsPanelCtrl {
 
   // Called from anularjs with ng-change
   onTextBoxRefresh() {}
-
 }

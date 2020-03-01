@@ -6,7 +6,7 @@ export class JsImportPanel extends PanelCtrl {
   static templateUrl = 'panels/import-json-panel/partials/panelTemplate.html';
   static scrollable = true;
 
-/*  panelDefaults = {
+  panelDefaults = {
     draw_area_id: '',
     graph_connected_to_network: false,
     jsonContent: '',
@@ -14,11 +14,11 @@ export class JsImportPanel extends PanelCtrl {
     secondToRefresh: 5,
     write_datasource_id: '',
     write_db_name: 'test_DB',
-  };*/
+  };
 
   constructor($scope: any, $injector: any) {
     super($scope, $injector);
-    //_.defaults(this.panel, this.panelDefaults);
+    _.defaults(this.panel, this.panelDefaults);
 
     this.events.on('init-edit-mode', this.onInitEditMode.bind(this));
   }

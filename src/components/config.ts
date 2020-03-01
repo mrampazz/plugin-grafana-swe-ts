@@ -27,7 +27,7 @@ export class ConfigCtrl {
 
   postUpdate() {
     if (!this.appModel.enabled) {
-      console.log("plugin disabled");
+      console.log('plugin disabled');
       return;
     }
 

@@ -27,8 +27,8 @@
     },
     "includes": [
         {
-            "type": "panel",
-            "name": "VRAM Software"
+            "type": "vram-panel",
+            "name": "VRAM panel"
         },
         {
             "type": "dashboard",

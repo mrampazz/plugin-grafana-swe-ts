@@ -1,6 +1,6 @@
 import { PluginMeta } from '@grafana/data';
 
-export class ConfigCtrl {
+export class TestControl {
   static templateUrl: string;
   enabled: boolean;
   appEditCtrl: any;
@@ -39,4 +39,4 @@ export class ConfigCtrl {
   }
 }
 
-ConfigCtrl.templateUrl = 'components/config.html';
+TestControl.templateUrl = 'components/config.html';

@@ -1,7 +1,6 @@
-import { PanelCtrl } from 'grafana/app/plugins/sdk';
-
 import _ from 'lodash';
 import { PanelEvents } from '@grafana/data';
+import { PanelCtrl } from 'grafana/app/plugins/sdk';
 
 export class JsImportPanel extends PanelCtrl {
   static templateUrl = 'panels/import-json-panel/partials/panelTemplate.html';

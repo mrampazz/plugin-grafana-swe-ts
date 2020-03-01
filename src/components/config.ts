@@ -1,4 +1,4 @@
-import {PluginMeta} from "@grafana/data";
+import { PluginMeta } from '@grafana/data';
 
 export class ConfigCtrl {
   static templateUrl: string;

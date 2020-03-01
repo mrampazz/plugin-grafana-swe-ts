@@ -25,7 +25,7 @@ export class JsImportPanel extends PanelCtrl {
 
   onInitEditMode() {
     this.addEditorTab(
-      'Manage network',
+      'Configure plugin',
       'public/plugins/grafana-prediction-plugin/panels/import-json-panel/partials/optionTab_importEditJson.html',
       1
     );

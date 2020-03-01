@@ -17,4 +17,4 @@ export class ConfigCtrl {
   }
 }
 
-ConfigCtrl.templateUrl = "components/config.html";
+ConfigCtrl.templateUrl = 'components/config.html';

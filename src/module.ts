@@ -1,8 +1,6 @@
-import { ConfigCtrl} from "./components/config";
-import { AppPlugin } from "@grafana/data";
+import { ConfigCtrl } from './components/config';
+import { AppPlugin } from '@grafana/data';
 
-export {
-  ConfigCtrl,
-};
+export { ConfigCtrl };
 
 export const plugin = new AppPlugin();

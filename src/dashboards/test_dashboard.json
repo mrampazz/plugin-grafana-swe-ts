@@ -28,8 +28,8 @@
     "links": [],
     "panels": [
         {
-            "type": "json-test-import-panel",
-            "title": "Import Json Network",
+            "type": "vram-panel",
+            "title": "VRAM panel",
             "gridPos": {
                 "x": 0,
                 "y": 0,
@@ -41,7 +41,7 @@
             "content": ""
         }
     ],
-    "schemaVersion": 16,
+    "schemaVersion": 1,
     "style": "dark",
     "tags": ["test"],
     "templating": {
@@ -79,6 +79,6 @@
     "timezone": "",
     "title": "Test Dashboard",
     "uid": "",
-    "version": 2,
+    "version": 1,
     "network": null
 }

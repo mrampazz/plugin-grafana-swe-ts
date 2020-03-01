@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import { PanelEvents } from '@grafana/data';
 import { PanelCtrl } from 'grafana/app/plugins/sdk';
+import appEvents from 'grafana/app/core/app_events';
 
 export class JsImportPanel extends PanelCtrl {
   static templateUrl = 'panels/import-json-panel/partials/panelTemplate.html';
@@ -26,6 +27,8 @@ export class JsImportPanel extends PanelCtrl {
   // Called only on import button click, if the import doesn't throw errors, it reset the saved data
   async upload_button_click(net: any) {
     await this.onUpload(net);
+
+    appEvents.emit('alert-success', ['JSON file imported!', 'Success']);
   }
 
   // Called on import button click but also to re-load a saved network

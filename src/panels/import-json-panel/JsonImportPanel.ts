@@ -1,9 +1,9 @@
 import _ from 'lodash';
 import { PanelEvents } from '@grafana/data';
-import { PanelCtrl } from 'grafana/app/plugins/sdk';
+import { MetricsPanelCtrl } from 'grafana/app/plugins/sdk';
 import appEvents from 'grafana/app/core/app_events';
 
-export class JsImportPanel extends PanelCtrl {
+export class JsImportPanel extends MetricsPanelCtrl {
   static templateUrl = 'panels/import-json-panel/partials/panelTemplate.html';
   static scrollable = true;
 
@@ -36,4 +36,5 @@ export class JsImportPanel extends PanelCtrl {
 
   // Called from anularjs with ng-change
   onTextBoxRefresh() {}
+
 }

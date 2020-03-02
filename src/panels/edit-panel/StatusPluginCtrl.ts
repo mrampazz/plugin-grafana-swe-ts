@@ -7,6 +7,10 @@ export class StatusPluginCtrl extends MetricsPanelCtrl {
   static templateUrl = 'panels/edit-panel/partials/panelTemplate.html';
   static scrollable = true;
 
+  message: string;
+  private seriesList: any;
+  seriesOutput: string;
+
   panelDefaults = {
     jsonContent: '',
     secondToRefresh: 5,
@@ -16,7 +20,13 @@ export class StatusPluginCtrl extends MetricsPanelCtrl {
   constructor($scope: any, $injector: any) {
     super($scope, $injector);
     _.defaults(this.panel, this.panelDefaults);
+
+    this.message = 'Loading data...';
+    this.seriesOutput = 'Loading data...';
+
     this.events.on(PanelEvents.editModeInitialized, this.onInitEditMode.bind(this));
+    this.events.on(PanelEvents.dataReceived, this.onDataReceived.bind(this));
+    this.events.on(PanelEvents.render, this.onRender.bind(this));
   }
 
   onInitEditMode() {
@@ -37,6 +47,20 @@ export class StatusPluginCtrl extends MetricsPanelCtrl {
   async delete_json_click() {
     this.panel.jsonContent = null;
     appEvents.emit('alert-success', ['File Json Cancellato']);
+  }
+
+  onRender() {
+    this.message = this.seriesList[0].alias + ' :';
+    this.seriesOutput = '';
+    for (let i = 0; i < this.seriesList[0].datapoints.length; i++) {
+      this.seriesOutput += (Math.round(this.seriesList[0].datapoints[i][0] * 100) / 100).toFixed(2) + '; ';
+    }
+  }
+
+  onDataReceived(data: any) {
+    console.log(data);
+    this.seriesList = data;
+    this.render();
   }
 
   // Called from anularjs with ng-change
